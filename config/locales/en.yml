@@ -579,7 +579,7 @@ en:
       subtitle_3: Stop scouring job boards and sit back as companies reach out to you first.
       title_1: The reverse job board for
       title_2: Tech Leads
-      title_og: The reverse job board for Technial Leads
+      title_og: The reverse job board for Technical Leads
       turbo_native_title: RailsDevs
   impersonating_banner_component:
     cta: Sign out
@@ -732,38 +732,38 @@ en:
   pricing:
     cta:
       cta: Get started today
-      subtitle: Find your next Rails developer today.
+      subtitle: Find your next Technical Lead today.
       title: Ready to start hiring?
     faq:
       annual:
-        a_html: Yes. Email Joe to set up discounted annual billing at <a href='mailto:joe@railsdevs.com' class='underline'>joe@railsdevs.com</a>.
+        a_html: Yes. Email Cody to set up discounted annual billing at <a href='mailto:cody@fractionaltechlead.com' class='underline'>cody@fractionaltechlead.com</a>.
         q: Can I pay annually or yearly?
       cancellation:
         a_html: Yes. You can cancel your subscription from the Billing link in the user drop-down. You will lose access to all paid features at the end of your billing period.
         q: Can I cancel my subscription at any time?
       developers:
-        a: No. RailsDevs is free for developers.
-        q: Does RailsDevs cost anything for developers?
+        a: No. FractionalTechLead is free for developers.
+        q: Does FractionalTechLead cost anything for developers?
       fee:
-        a_html: If you hire a full-time employee through RailsDevs you agree to pay a placement fee equal to 10% of their salary.
-        q: How does the 10% hiring fee work?
+        a_html: If you purchase a block of hours or retainer through FractionalTechLead you agree to pay a placement fee equal to 10% of the monthly amount.
+        q: How does the 10% fee work?
       support:
-        a_html: Email the founder – that's me, Joe! – with any questions. You can reach me at <a href='mailto:joe@railsdevs.com' class='underline'>joe@railsdevs.com</a>.
+        a_html: Email the founder – that's me, Cody! – with any questions. You can reach me at <a href='mailto:cody@fractionaltechlead.com' class='underline'>cody@fractionaltechlead.com</a>.
         q: Who can I contact for more specific questions?
       title: Frequently asked questions
     hero:
       description: Directly connect with the top developers with a unique of skills and specialties looking for their next job.
       title: Hire Fractional Tech Leads
     plan:
-      description: Skip the formal job postings and middlemen – hire directly from a candidate pool of Ruby on Rails developers, from juniors to C-level.
+      description: Skip the formal job postings and middlemen – hire directly from a candidate pool of qualified developers. A unique blend of contribution and management makes these player-coach type of developers a huge assest for your team.
       features:
         email_updates: Email updates of new candidates
         hand_selected_matches: Hand-selected matches every month
         message: Message directly with developers
         oss: Support independent developers and OSS
-        rails: Exclusively Ruby on Rails developers
+        rails: Exclusively vetted and qualified technical leads
         support: Email and video support from the founder
-        title: RailsDevs exclusives
+        title: FractionalTechLead exclusives
       hiring_fee: "+ 10% first year salary"
       per_month: "/month"
       title_html: For your 1<sup>st</sup> hire and beyond
@@ -776,9 +776,9 @@ en:
     stats:
       description: Organic, genuine conversations with higher response rates than LinkedIn or cold email.
       new_devs: New devs a month
-      rails_developers: Rails developers
+      rails_developers: Technical Leads
       response_rate: Response rate
-      title: The Rails-only hiring platform
+      title: The Tech Lead-only hiring platform
   public_profiles:
     new:
       cancel: Cancel
@@ -823,7 +823,7 @@ en:
       email: Email
       github: GitHub
       language_name_of_locale: English
-      masilotti_com: Masilotti.com
+      masilotti_com: CodyNorman.com
       open_source: Open source
       open_startup: Open startup
       privacy_policy: Privacy policy
