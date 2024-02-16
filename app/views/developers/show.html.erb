@@ -11,6 +11,13 @@
     </div>
   </div>
 
+  <% if @developer.stripe_account_id.present? %>
+    <%= @developer.stripe_account_id.to_json %>
+  <% else %>
+    <p>No Stripe account found</p>
+    <%= button_to "Create a Stripe Account", stripe_account_path, method: :post, data: { turbo: false } %>
+  <% end %>
+
   <div class="flex-1">
     <div class="pt-6 pb-8 xl:pb-10">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-5xl lg:grid lg:grid-cols-3">
