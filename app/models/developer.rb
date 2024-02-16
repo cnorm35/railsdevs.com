@@ -30,12 +30,15 @@ class Developer < ApplicationRecord
   has_one :role_level, dependent: :destroy, autosave: true
   has_one :role_type, dependent: :destroy, autosave: true
   has_one_attached :cover_image
+  has_many :services, class_name: "Developers::Service", dependent: :destroy
 
   has_noticed_notifications
 
   accepts_nested_attributes_for :location, reject_if: :all_blank, update_only: true
   accepts_nested_attributes_for :role_level, update_only: true
   accepts_nested_attributes_for :role_type, update_only: true
+  accepts_nested_attributes_for :services, allow_destroy: true, reject_if: :all_blank
+
 
   validates :bio, presence: true
   validates :cover_image, content_type: ["image/png", "image/jpeg", "image/jpg"], max_file_size: 10.megabytes
