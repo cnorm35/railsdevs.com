@@ -23,8 +23,8 @@ module Stripe
 
       account_link = Stripe::AccountLink.create(
         account: account.id,
-        refresh_url: stripe_account_url,
-        return_url: stripe_account_url,
+        refresh_url: developer_url(current_user.developer),
+        return_url: developer_url(current_user.developer),
         type: 'account_onboarding',
       )
 

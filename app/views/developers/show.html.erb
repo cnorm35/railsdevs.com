@@ -12,10 +12,9 @@
   </div>
 
   <% if @developer.stripe_account_id.present? %>
-    <%= @developer.stripe_account_id.to_json %>
+    Stripe account: <%= @developer.stripe_account_id %>
   <% else %>
-    <p>No Stripe account found</p>
-    <%= button_to "Create a Stripe Account", stripe_account_path, method: :post, data: { turbo: false } %>
+    <%= button_to "Create a Stripe Account", stripe_account_path, method: :post, body: { developer_id: @developer.id }, data: { turbo: false }, class: "rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" %>
   <% end %>
 
   <div class="flex-1">

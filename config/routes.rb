@@ -135,6 +135,7 @@ Rails.application.routes.draw do
   namespace :webhooks do
     resource :postmark, only: :create, controller: :postmark
     resource :revenuecat, only: :create, controller: :revenue_cat
+    resource :stripe, only: :create, controller: :stripe
   end
 
   get "/sitemap.xml.gz", to: redirect("#{Rails.configuration.sitemaps_host}sitemaps/sitemap.xml.gz"), as: :sitemap
