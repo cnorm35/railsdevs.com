@@ -10,6 +10,8 @@ module Developers
     end
 
     def new
+      @developer = Developer.find(params[:developer_id])
+
       @service = Service.new
     end
 

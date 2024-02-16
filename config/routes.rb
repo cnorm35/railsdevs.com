@@ -36,7 +36,7 @@ Rails.application.routes.draw do
     resources :developers, except: :destroy do
       resources :messages, only: %i[new create], controller: :cold_messages
       resources :public_profiles, only: :new
-      resources :services, controller: :developer_services
+      resources :services, controller: "developers/service"
     end
 
     namespace :developers do
