@@ -123,6 +123,7 @@ Rails.application.routes.draw do
   namespace :stripe do
     resource :checkout, only: :create
     resource :portal, only: :show
+    resource :account
   end
 
   namespace :turbo do

@@ -1,0 +1,6 @@
+<% if current_user.developer&.stripe_account_id.present? %>
+  <%= current_user.developer&.stripe_account_id.to_json %>
+<% else %>
+  <p>No Stripe account found</p>
+  <%= button_to "Create a Stripe Account", stripe_account_path, method: :post, data: { turbo: false } %>
+<% end %>
