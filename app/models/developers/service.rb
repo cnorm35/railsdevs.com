@@ -1,5 +1,7 @@
 module Developers
   class Service < ApplicationRecord
+    TYPES = %i[service_type rate active].freeze
+
     belongs_to :developer
 
     enum service_type: {
