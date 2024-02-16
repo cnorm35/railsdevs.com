@@ -1,6 +1,6 @@
 module Developers
   class Service < ApplicationRecord
-    TYPES = %i[service_type rate active].freeze
+    FIELDS = %i[service_type rate active name description].freeze
 
     belongs_to :developer
 

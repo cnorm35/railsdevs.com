@@ -173,6 +173,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_16_152328) do
   create_table "developers_services", force: :cascade do |t|
     t.bigint "developer_id", null: false
     t.integer "service_type", null: false
+    t.string "name"
+    t.text "description"
     t.integer "rate", default: 0, null: false
     t.boolean "active", default: true, null: false
     t.datetime "created_at", null: false

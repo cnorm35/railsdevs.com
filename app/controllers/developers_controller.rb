@@ -91,7 +91,7 @@ class DevelopersController < ApplicationController
       location_attributes: [:city, :state, :country],
       role_type_attributes: RoleType::TYPES,
       role_level_attributes: RoleLevel::TYPES,
-      service_attributes: Developers::Service::TYPES,
+      service_attributes: Developers::Service::FIELDS,
     ).merge(user_initiated: true)
   end
 end
