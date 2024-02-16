@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_19_080300) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_16_131004) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
   enable_extension "plpgsql"
@@ -88,6 +88,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_19_080300) do
     t.string "contact_role"
     t.boolean "invisible", default: false, null: false
     t.boolean "survey_request_notifications", default: true
+    t.string "stripe_customer_id"
     t.index ["user_id"], name: "index_businesses_on_user_id"
   end
 
@@ -150,6 +151,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_19_080300) do
     t.integer "search_score", default: 0, null: false
     t.integer "conversations_count", default: 0, null: false
     t.string "gitlab"
+    t.string "stripe_account_id"
     t.index ["public_profile_key"], name: "index_developers_on_public_profile_key", unique: true
     t.index ["textsearchable_index_col"], name: "textsearchable_index", using: :gin
     t.index ["user_id"], name: "index_developers_on_user_id"
