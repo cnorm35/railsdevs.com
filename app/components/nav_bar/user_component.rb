@@ -48,6 +48,7 @@ module NavBar
       links << Link.new(t(".get_started"), new_role_path) if neither?
       links << Link.new(t(".my_business_profile"), business_path(user.business)) if business?
       links << Link.new(t(".my_developer_profile"), developer_path(user.developer)) if developer?
+      links << Link.new(t(".my_services_profile"), developer_services_path(user.developer)) if developer?
       links << Link.new(t(".my_conversations"), conversations_path) if conversations?
       links << Link.new(t(".billing"), stripe_portal_path) if customer?
       links
