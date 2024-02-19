@@ -1,0 +1,11 @@
+<h1>My Services</h1>
+
+<% @services.each do |service| %>
+  <div class="service">
+    <h2><%= service.name %></h2>
+    <p><%= service.description %></p>
+    <%# <p><%= link_to "View", service_path(service) %1></p> %>
+    <%# <p><%= link_to "View", "#" %1></p> %>
+    <p><%= link_to "Edit", "#" %></p>
+  </div>
+<% end %>

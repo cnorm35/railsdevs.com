@@ -1,0 +1,39 @@
+<%= form_with(model: [:developers, service], url: [:developer, :services]) do |form| %>
+  <% if service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(service.errors.count, "error") %> prohibited this service from being saved:</h2>
+
+      <ul>
+      <% service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= render Admin::Forms::ContainerComponent.new("Service", "Add new service to your profile") do |container| %>
+
+  <%= render Admin::Forms::FieldComponent.new(form, :name) do |field| %>
+    <% field.with_input_text type: :text %>
+  <% end %>
+
+  <%= render Admin::Forms::FieldComponent.new(form, :service_type) do |field| %>
+    <% field.with_input_select options: Developers::Service.service_types, include_blank: true %>
+  <% end %>
+
+  <%= render Admin::Forms::FieldComponent.new(form, :description) do |field| %>
+    <% field.with_input_text_area %>
+  <% end %>
+
+
+  <%= render Admin::Forms::FieldComponent.new(form, :rate) do |field| %>
+    <% field.with_input_text type: :number %>
+  <% end %>
+
+  <%= form.check_box :active, class: "focus:ring-gray-500 h-4 w-4 text-gray-600 border-gray-300 rounded" %>
+  <%= form.label :active, "Service Active" %>
+
+  <% container.with_button_group do %>
+    <%= render SubmitButtonComponent.new(text: "Create Service", disable_with: "Creating...") %>
+  <% end %>
+  <% end %>
+<% end %>

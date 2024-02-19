@@ -1,7 +1,9 @@
 module Developers
   class ServicesController < ApplicationController
+    # before_action :authenticate_user!
+    before_action :set_developer
+
     def index
-      # @services = Service.all
       @services = current_user.developer.services
     end
 
@@ -10,15 +12,15 @@ module Developers
     end
 
     def new
-      @developer = Developer.find(params[:developer_id])
-
       @service = Service.new
     end
 
     def create
       @service = Service.new(service_params)
+      @service.developer = current_user.developer
       if @service.save
-        redirect_to developers_service_index_path
+        flash[:notice] = "Service created successfully"
+        redirect_to root_path
       else
         render :new
       end
@@ -46,7 +48,11 @@ module Developers
     private
 
     def service_params
-      params.require(:service).permit(:name, :description, :service_type, :rate, :active)
+      params.require(:developers_service).permit(:name, :description, :service_type, :rate, :active)
+    end
+
+    def set_developer
+      @developer = Developer.find_by_hashid!(params[:developer_id])
     end
   end
 end

@@ -134,6 +134,9 @@ GEM
     cssbundling-rails (1.0.0)
       railties (>= 6.0.0)
     date (3.3.3)
+    debug (1.9.1)
+      irb (~> 1.10)
+      reline (>= 0.3.8)
     devise (4.9.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -240,6 +243,10 @@ GEM
       nokogiri (>= 1.6)
     invisible_captcha (2.0.0)
       rails (>= 5.0)
+    io-console (0.7.2)
+    irb (1.11.2)
+      rdoc
+      reline (>= 0.4.2)
     jmespath (1.6.1)
     jsbundling-rails (1.0.0)
       railties (>= 6.0.0)
@@ -329,6 +336,8 @@ GEM
       method_source (~> 1.0)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
+    psych (5.1.2)
+      stringio
     public_suffix (5.0.3)
     puma (5.6.7)
       nio4r (~> 2.0)
@@ -376,12 +385,16 @@ GEM
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rdoc (6.6.2)
+      psych (>= 4.0.0)
     redcarpet (3.5.1)
     redis (5.0.6)
       redis-client (>= 0.9.0)
     redis-client (0.17.0)
       connection_pool
     regexp_parser (2.8.1)
+    reline (0.4.2)
+      io-console (~> 0.5)
     responders (3.1.0)
       actionpack (>= 5.2)
       railties (>= 5.2)
@@ -432,6 +445,7 @@ GEM
       rubocop-performance (= 1.13.3)
     stimulus-rails (0.7.2)
       rails (>= 6.0.0)
+    stringio (3.1.0)
     stripe (8.0.0)
     tarpon (0.4.0)
       http (~> 4.4)
@@ -481,6 +495,7 @@ DEPENDENCIES
   capybara
   classy-yaml
   cssbundling-rails
+  debug
   devise
   devise-i18n
   erb_lint
