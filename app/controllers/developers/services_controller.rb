@@ -1,5 +1,5 @@
 module Developers
-  class ServiceController < ApplicationController
+  class ServicesController < ApplicationController
     def index
       # @services = Service.all
       @services = current_user.developer.services
